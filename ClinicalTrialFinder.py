@@ -40,17 +40,5 @@ f.close()
 pmc.close()
 titles.close()
 
-# print 'getting xmls'
-# sql = "SELECT xml from shared.articles_pmc_dec_2013 as pmc where pmc.id_ext IN (%s)"
-# in_p=', '.join(list(map(lambda x: '%s', ids)))
-# sql = sql % in_p
-# cur.execute(sql, ids)
-# i = 0
-# print 'writing xmls to files'
-# for row in cur.fetchall() :
-#     pmc = open('document'+i+'.xml','w')
-#     pmc.write(row[0])
-#     pmc.close()
-#     i=i+1
 print 'end'
     
