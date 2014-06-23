@@ -20,7 +20,7 @@ simple_tables = "data_simple"
 simplest_tables = "data_simplest"
 evaluation_tables = "eval_tables"
 eavluation_information = "eval_info"
-eval_num = 100
+eval_num = 30
 
 s_tables  = []
 ss_tables = []
