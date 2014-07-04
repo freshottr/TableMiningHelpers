@@ -39,7 +39,6 @@ for fname in onlyfiles:
     path = mypath+'/'+fname
     file = open(path,'r')
     xml = file.read()
-   #print xml
     parsed_html = BeautifulSoup(xml)
     data_table = parsed_html.body.findAll('table-wrap')
     tables_in_doc = len(data_table)
