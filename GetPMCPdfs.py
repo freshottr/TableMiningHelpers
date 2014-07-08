@@ -12,7 +12,7 @@ import urllib
 import csv
 import os
 mypath = "data"
-PDFDirPath = "pmc-pdfs-all1"
+PDFDirPath = "pmc-pdfs"
 initialPath = "ftp://ftp.ncbi.nlm.nih.gov/pub/pmc/" #Here goes PMCNUM/pdf/
 if not os.path.exists(PDFDirPath):
     os.makedirs(PDFDirPath)
