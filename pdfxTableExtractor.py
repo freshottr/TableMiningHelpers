@@ -35,8 +35,17 @@ for fname in onlyfiles:
     tables_in_doc = len(data_table)
     if(data_table!=None and tables_in_doc!=0):
         table_file = open(table_path+'/'+fname+'.html','w')
-        table_file.write('<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head><body>')
-        data = str(data_table).replace('[', '').replace(']', '\r\n')
+        table_file.write("""<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <style>
+         table, td, th,tr {
+    border: 1px solid green;
+}
+</style>
+        </head><body>""")
+        data=''
+        for tab in data_table:
+            data+=str(tab)+'<br/><br/><br/>'
+        data = data.replace('[', '').replace(']', '')
         table_file.write(str(data))
         table_file.write('</body></html>')
         table_file.close()
