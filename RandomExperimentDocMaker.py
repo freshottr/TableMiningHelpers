@@ -40,7 +40,8 @@ for fname in onlyfiles:
     file = open(path,'r')
     xml = file.read()
     parsed_html = BeautifulSoup(xml)
-    data_table = parsed_html.body.findAll('table-wrap')
+    if parsed_html.body!= None :
+        data_table = parsed_html.body.findAll('table-wrap')
     tables_in_doc = len(data_table)
     if(data_table!=None and tables_in_doc!=0):
         table_file = open(docs_with_tables+'/'+fname,'w')
