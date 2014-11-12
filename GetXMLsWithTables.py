@@ -11,13 +11,14 @@ from os.path import isfile, join
 from bs4 import BeautifulSoup
 import shutil
 
-data_path = 'BioMedicalDocs'
-table_path = 'biomed_w_tables'
+data_path = 'all_PMC_data'
+table_path = 'all_PMC_data_w_tables'
 
 onlyfiles = [ f for f in listdir(data_path) if isfile(join(data_path,f)) ]
-print onlyfiles
+#print onlyfiles
 i=0
 num_of_tables = 0
+print 'start loop'
 for fname in onlyfiles:
     print fname
     path = data_path+'/'+fname
